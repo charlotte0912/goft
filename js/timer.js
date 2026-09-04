@@ -24,8 +24,8 @@
       modalInstance.show();
     } else {
       alert('頁面已閒置超過 5 分鐘，按下確定將重新整理。');
-      window.location.reload();
-    }
+    isIdleModalOpen = false;
+    load();    }
   }
 
   // 重置計時器
@@ -65,7 +65,8 @@
     const btnReload = document.querySelector('#btnIdleReload');
     if (btnReload) {
       btnReload.addEventListener('click', () => {
-        window.location.reload();
+        isIdleModalOpen = false;
+        load();
       });
     }
   });
