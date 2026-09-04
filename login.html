@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f5132">
 <title>高爾夫球場使用狀況</title>
+<link rel="manifest" href="manifest.webmanifest">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/card.css">
@@ -277,10 +278,10 @@
       <div class="golf-icon">⛳</div>
 
       <h1>歡迎登入</h1>
-      <p class="subtitle">請輸入密碼以查看球場使用狀況</p>
+      <p class="subtitle">請輸入工號以查看球場使用狀況</p>
 
       <form id="loginForm">
-        <label for="employeeId">密碼</label>
+        <label for="employeeId">工號</label>
 
         <div class="input-wrap">
           <span class="input-icon">👤</span>
@@ -288,7 +289,7 @@
             id="employeeId"
             name="employeeId"
             type="text"
-            placeholder="請輸入密碼"
+            placeholder="請輸入工號"
             autocomplete="username"
             required
           >
@@ -300,6 +301,12 @@
   </main>
 
   <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+
     document.getElementById('loginForm').addEventListener('submit', function (event) {
       event.preventDefault();
 
