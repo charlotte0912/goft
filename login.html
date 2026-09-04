@@ -27,7 +27,7 @@
       --text: #26352d;
       --muted: #718078;
       --border: #d8e4da;
-      --max-content-width: 420px;
+      --max-content-width: 1180px;
     }
 
     * {
@@ -70,7 +70,7 @@
       align-items: center;
       gap: 10px;
       margin: 0 auto;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 700;
     }
 
@@ -88,13 +88,13 @@
       min-height: calc(100vh - 64px);
       display: grid;
       place-items: center;
-      padding: 32px 16px;
+      padding: 48px 32px;
     }
 
     .login-card {
       width: 100%;
-      max-width: var(--max-content-width);
-      padding: 34px 30px;
+      max-width: 620px;
+      padding: 48px 52px;
       border: 1px solid rgba(255, 255, 255, 0.8);
       border-radius: 20px;
       background: rgba(255, 255, 255, 0.94);
@@ -102,40 +102,39 @@
     }
 
     .golf-icon {
-      width: 64px;
-      height: 64px;
+      width: 82px;
+      height: 82px;
       display: grid;
       place-items: center;
       margin: 0 auto 18px;
       border-radius: 18px;
       background: linear-gradient(145deg, #397b4a, var(--brand-green));
       color: #fff;
-      font-size: 30px;
+      font-size: 38px;
     }
 
     .login-card h1 {
       margin: 0;
       text-align: center;
-      font-size: 24px;
+      font-size: 30px;
       letter-spacing: 0.5px;
     }
 
     .subtitle {
-      margin: 10px 0 30px;
+      margin: 14px 0 38px;
       color: var(--muted);
       text-align: center;
-      font-size: 15px;
+      font-size: 18px;
     }
 
     .login-card label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
+      margin-bottom: 10px;
+      font-size: 17px;
       font-weight: 700;
     }
 
     .input-wrap {
-      height: 54px;
+      height: 62px;
       display: flex;
       align-items: center;
       border: 1px solid var(--border);
@@ -150,9 +149,9 @@
     }
 
     .input-icon {
-      margin: 0 12px 0 16px;
+      margin: 0 16px 0 20px;
       color: var(--brand-green);
-      font-size: 18px;
+      font-size: 21px;
     }
 
     .input-wrap input {
@@ -164,7 +163,7 @@
       background: transparent;
       color: var(--text);
       font: inherit;
-      font-size: 16px;
+      font-size: 18px;
     }
 
     .input-wrap input::placeholder {
@@ -173,14 +172,14 @@
 
     .login-button {
       width: 100%;
-      height: 52px;
-      margin-top: 22px;
+      height: 58px;
+      margin-top: 26px;
       border: 0;
       border-radius: 12px;
       background: linear-gradient(135deg, var(--brand-green-light), var(--brand-green));
       color: #fff;
       font: inherit;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
       cursor: pointer;
       box-shadow: 0 5px 12px rgba(28, 81, 50, 0.20);
@@ -221,18 +220,55 @@
         padding: 30px 24px;
       }
 
+      .golf-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 30px;
+      }
+
+      .login-card h1 {
+        font-size: 24px;
+      }
+
+      .subtitle {
+        margin: 10px 0 30px;
+        font-size: 15px;
+      }
+
+      .login-card label {
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      .input-wrap {
+        height: 54px;
+      }
+
+      .input-icon {
+        margin: 0 12px 0 16px;
+        font-size: 18px;
+      }
+
+      .input-wrap input {
+        font-size: 16px;
+      }
+
       .login-button {
         height: 48px;
+        margin-top: 22px;
+        font-size: 16px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <div class="brand-icon">⛳</div>
-      <span>高爾夫球場使用狀況</span>
+  <header class="sticky-top text-white shadow-sm py-3 header-custom">
+    <div class="header-content d-flex align-items-center">
+      <div class="brand">
+        <div class="brand-icon">⛳</div>
+        <span>高爾夫球場使用狀況</span>
+      </div>
     </div>
   </header>
 
