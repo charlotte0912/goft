@@ -3,8 +3,8 @@
    ============================================================ */
 
 
-const DATA_URL = "/GolfActivity/GetGolfReservation";
-const API_METHOD = 'POST';
+const DATA_URL = "usage-sample.json";
+const API_METHOD = 'GET';
 const RANGE_DAYS = 31;
 
 const $$ = selector => document.querySelector(selector);
