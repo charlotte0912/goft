@@ -3,9 +3,10 @@
    ============================================================ */
 
 
-const DATA_URL = "usage-sample.json";
-const API_METHOD = 'GET';
+const DATA_URL = 'usage-sample.json';
+const API_METHOD = 'Get'; // 或 'POST'，視 API 設計而定
 const RANGE_DAYS = 31;
+const calendarDates = new Set(); //相同值只保留一次
 
 const $$ = selector => document.querySelector(selector);
 
@@ -182,3 +183,4 @@ function setLoading(isLoading) {
     `;
   }
 }
+
