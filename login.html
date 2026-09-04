@@ -296,6 +296,8 @@
         </div>
 
         <button class="login-button" type="submit">登入</button>
+        
+
       </form>
     </section>
   </main>
@@ -303,7 +305,6 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js');
       });
     }
 
@@ -313,7 +314,9 @@
       const employeeId = document.getElementById('employeeId').value.trim();
 
       if (!employeeId) return;
+
       console.log('登入工號：', employeeId);
+
       location.href = 'index.html';
     });
   </script>
